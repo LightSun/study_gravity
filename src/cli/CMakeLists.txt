@@ -3,6 +3,7 @@
 # Sources
 SET(GRAVITY_SRC gravity.c
     main.cpp
+    test_dynamic.cpp
     )
 
 # Executable

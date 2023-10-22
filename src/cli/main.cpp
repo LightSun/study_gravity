@@ -10,6 +10,8 @@
 
 #include <string>
 
+int main_rect(int argc, const char * argv[]);
+
 static bool NativeFunction(gravity_vm *vm, gravity_value_t *args,
                                 uint16_t nargs, uint32_t rindex)
 {
@@ -28,9 +30,11 @@ static bool NativeFunction(gravity_vm *vm, gravity_value_t *args,
     RETURN_VALUE(VALUE_FROM_NULL, rindex);
 }
 
-int main(int argc, char** argv)
+int main(int argc,  const char * argv[])
 {
     setbuf(stdout, NULL);
+    main_rect(argc, argv);
+
     gravity_delegate_t delegate = {};
     gravity_compiler_t* compiler = gravity_compiler_create(&delegate);
 
